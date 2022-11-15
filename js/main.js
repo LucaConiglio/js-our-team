@@ -52,7 +52,7 @@ console.log(team);
 
 //creo un ciclo che mi dia uno per volta i membri del team
 for ( let key in team){
-    console.log(team[key]);
+    console.log(" Nome " + team[key].nome + " Ruolo " + team[key].ruolo + " Foto " + team[key].foto);
     //utenti é uguale a indice di ogni utente per ciclo!
     const utenti = team[key];
 
