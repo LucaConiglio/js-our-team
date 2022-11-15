@@ -19,6 +19,8 @@
 //Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
 //Scott Estrada	Developer	            scott-estrada-developer.jpg
 //Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg
+
+//creo una array con dentro gli oggetti nome ruolo e foto
 const team = [
     {nome:"Wayne Barnett",
      ruolo: "Founder & CEO",
@@ -44,6 +46,48 @@ const team = [
      ruolo:"Graphic Designer",
      foto: "barbara-ramos-graphic-designer.jpg"
     }
-]
-
+];
+const containerEl = document.querySelector(".container");
 console.log(team);
+
+//creo un ciclo che mi dia uno per volta i membri del team
+for ( let key in team){
+    console.log(team[key]);
+    //utenti é uguale a indice di ogni utente per ciclo!
+    const utenti = team[key];
+
+    let box = document.createElement("div");
+    box.innerHTML = "Nome: " + utenti.nome + " Ruolo: " + " " + utenti.ruolo + " Foto: " + " " + utenti.foto;
+    box.classList.add("space");
+    containerEl.append(box);
+
+}
+const containerCard = document.querySelector(".container-card")
+for (let i = 0; i < team.length; i++ ) {
+    //utenti é uguale a indice di ogni utente per ciclo!
+    const utenti = team[i].foto;
+    const descrizioneUtente = team[i]
+
+    let boxImg = document.createElement("div");
+    boxImg.classList.add("flexbox")
+
+    //creo immagine
+    let imgEl = document.createElement("img");
+    //tramite src creo le foto
+    imgEl.src = "img/" + utenti
+    //imgEl.classList.add("card");
+
+    let descrizione = document.createElement("h3");
+    descrizione.innerHTML = "Nome: " + descrizioneUtente.nome + " Ruolo: " + " " + descrizioneUtente.ruolo;
+    descrizione.classList.add("text-center")
+
+
+    containerCard.append(boxImg);
+    boxImg.append(descrizione);
+    boxImg.append(imgEl);
+
+
+
+}
+
+
