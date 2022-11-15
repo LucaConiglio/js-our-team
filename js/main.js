@@ -61,7 +61,9 @@ for ( let key in team){
     box.classList.add("space");
     containerEl.append(box);
 
+    
 }
+
 const containerCard = document.querySelector(".container-card")
 for (let i = 0; i < team.length; i++ ) {
     //utenti é uguale a indice di ogni utente per ciclo!
@@ -85,8 +87,6 @@ for (let i = 0; i < team.length; i++ ) {
     containerCard.append(boxImg);
     boxImg.append(descrizione);
     boxImg.append(imgEl);
-
-
 
 }
 
